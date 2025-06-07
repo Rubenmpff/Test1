@@ -1,0 +1,37 @@
+/* ==========================
+   RODAPÉ
+========================== */
+footer {
+  background-color: #00A388;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-radius: 20px 20px 0 0;
+  flex-shrink: 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  justify-content: center;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.15);
+}

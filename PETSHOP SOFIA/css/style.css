@@ -1,0 +1,322 @@
+/* ==========================
+   RESET
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================
+   BASE GERAL
+========================== */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #000000;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* ==========================
+   IMAGEM PRINCIPAL
+========================== */
+main img {
+  display: block;
+  margin: 30px auto 20px;
+  width: 180px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+main img:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  section {
+    padding: 15px 20px;
+    margin: 15px 10px;
+  }
+
+  main img {
+    width: 140px;
+  }
+
+  .swiper-slide img {
+    height: 220px;
+  }
+
+  .titulo-carrossel {
+    font-size: 1.4rem;
+  }
+}
+
+/* ==========================
+   CIRCULAR IMAGES
+========================== */
+.clickable-circle {
+  display: inline-block;
+  margin: 2em;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.clickable-circle img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.clickable-circle:hover img {
+  transform: scale(1.05);
+  border-color: #ff9800;
+  cursor: pointer;
+}
+
+.clickable-circle span {
+  display: block;
+  margin-top: 0.5em;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+/* ==========================
+   MARQUE JA
+========================== */
+.marcar-btn {
+  display: block;
+  margin: 32px auto 0 auto; 
+  padding: 14px 36px;
+  background: linear-gradient(90deg, #ff9800 0%, #ff6138 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 18px rgba(255, 152, 0, 0.18);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.marcar-btn::after {
+  content: "→";
+  margin-left: 12px;
+  font-size: 1.3em;
+  vertical-align: middle;
+  transition: margin-left 0.2s;
+}
+.marcar-btn:hover {
+  background: linear-gradient(90deg, #ff6138 0%, #ff9800 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(255, 97, 56, 0.22);
+}
+.marcar-btn:hover::after {
+  margin-left: 20px;
+}
+
+/* ==========================
+   CHATBOT
+========================== */
+
+#chatbot-button,
+    #chatbot-popup {
+      position: fixed;
+      z-index: 999999 !important;
+    }
+
+  #chatbot-button {
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    background-color: #ff6138;
+    color: white;
+    padding: 20px 32px;      
+    font-size: 20px;       
+    border: none;
+    border-radius: 35px;     
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+    #chatbot-button:hover {
+      background-color: #ff7f50;
+    }
+
+    #chatbot-popup {
+      bottom: 80px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      display: none;
+    }
+
+    #chatbot-popup.show {
+      display: flex;
+    }
+
+    #chatbot-header {
+      background-color: #ff6138;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    #chatbot-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    #chatbot-input-area {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+
+    #chatbot-input {
+      flex: 1;
+      border: none;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    #chatbot-send {
+      background-color: #ff6138;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    #chatbot-send:hover {
+      background-color: #ff7f50;
+    }
+
+    /* Ajuda Popup - estilo balão junto ao chatbot */
+#help-popup {
+  display: none;
+  position: fixed;
+  bottom: 95px;
+  right: 38px;
+  background: #fff;
+  border-radius: 18px 18px 18px 4px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 6px rgba(255,97,56,0.10);
+  padding: 16px 36px 20px 22px;
+  z-index: 100000;
+  min-width: 200px;
+  max-width: 260px;
+  text-align: left;
+  font-size: 18px;
+  color: #333;
+  border: 1.5px solid #ff6138;
+  animation: popup-fade-in 0.7s cubic-bezier(.4,1.6,.6,1) both;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-sizing: border-box;
+}
+
+#help-popup:after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  right: 32px;
+  border-width: 18px 18px 0 0;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+}
+
+#help-popup:before {
+  content: "";
+  position: absolute;
+  bottom: -21px;
+  right: 31px;
+  border-width: 20px 20px 0 0;
+  border-style: solid;
+  border-color: #ff6138 transparent transparent transparent;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+#help-popup p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+#help-popup-close {
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  cursor: pointer;
+  font-size: 22px;
+  color: #ff6138;
+  background: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(255,97,56,0.08);
+  border: none;
+  outline: none;
+  z-index: 1;
+}
+#help-popup-close:hover {
+  background: #ff6138;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(255,97,56,0.18);
+}
+
+@keyframes popup-fade-in {
+  from { opacity: 0; transform: translateY(30px) scale(0.95);}
+  to { opacity: 1; transform: translateY(0) scale(1);}
+}

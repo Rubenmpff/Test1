@@ -1,0 +1,177 @@
+/* ==========================
+   DARK MODE VARIABLES
+========================== */
+:root {
+  --cor-primaria: #2d3a4a;
+  --cor-secundaria: #e0e7ef;
+  --cor-destaque: #ff6138;
+  --cor-branco: #fff;
+  --cor-cinza: #f7fafc;
+  --cor-principal: #FFFF9D;
+}
+
+body.dark,
+body.dark-mode {
+  --cor-primaria: #e0e7ef;
+  --cor-secundaria: #23272f;
+  --cor-destaque: #ffb38a;
+  --cor-branco: #23272f;
+  --cor-cinza: #23272f;
+  --cor-principal: #181a20;
+  --bg-color: #181a20;
+  --text-color: #e0e7ef;
+}
+
+/* ==========================
+   DARK MODE BACKGROUND
+========================== */
+body.dark-mode { 
+  background: url('../images/bg1.png') no-repeat center center fixed;
+  background-size: cover;
+}
+body.dark-mode section {
+  background-color: #1e1e1e;
+  color: #cccccc;
+}
+body.dark {
+  background-color: #121212;
+  color: #000000;
+}
+
+/* ==========================
+   DARK MODE COMPONENTS
+========================== */
+body.dark .navbar,
+header.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark .navbar a,
+header.dark .navbar a {
+  color: #fff !important;
+}
+
+footer.dark {
+  background-color: #222;
+  color: #fff;
+}
+body.dark a {
+  color: #ffffff;
+}
+
+/* ==========================
+   LOJA
+========================== */
+body.dark .tab-content,
+body.dark .loja-container {
+  background: var(--cor-principal);
+  color: var(--text-color);
+}
+body.dark .produtos-grid > div {
+  background: #23272f;
+  color: var(--text-color);
+}
+body.dark .btn-carrinho {
+  background: var(--cor-destaque);
+  color: #23272f;
+}
+body.dark .btn-carrinho:hover {
+  background: #ff7f50;
+  color: #fff;
+}
+body.dark .loja-busca input#busca-produto,
+body.dark-mode .loja-busca input#busca-produto {
+  background: #23272f;
+  color: #e0e7ef;
+  border: 1.5px solid #444;
+}
+body.dark .loja-busca input#busca-produto::placeholder,
+body.dark-mode .loja-busca input#busca-produto::placeholder {
+  color: #b0b6c3;
+  opacity: 1;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer-logo-light {
+  display: inline;
+}
+.footer-logo-dark {
+  display: none;
+}
+
+body.dark .footer-logo-light,
+body.dark-mode .footer-logo-light {
+  display: none;
+}
+body.dark .footer-logo-dark,
+body.dark-mode .footer-logo-dark {
+  display: inline;
+}
+
+/* ==========================
+   DARK MODE TOGGLE BUTTON
+========================== */
+#darkModeToggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #ccc;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle-wrapper.fixed-toggle {
+  position: sticky;
+  top: 20%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #f1c40f, #aaa);
+  border-radius: 30px;
+  width: 60px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  padding: 0 5px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
+
+.theme-toggle .icon {
+  font-size: 0.9rem;
+  z-index: 1;
+  color: #444;
+}
+
+.toggle-ball {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  transition: left 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .theme-toggle .toggle-ball {
+  left: 33px;
+}

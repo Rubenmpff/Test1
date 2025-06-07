@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Petshop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/darkmode.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/section.css">
+  <link rel="stylesheet" href="css/carrossel.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="images/PET PHOTO.jpg" alt="Petshop Logo" class="round-photo" />
+        <h1>
+          <a href="inicio.html" class="logo-link">Petshop</a>
+        </h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="marcacao.html">Marcações</a></li>
+        <li><a href="loja.html">Loja</a></li>
+        <li><a href="contactos.html">Contactos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Dark Mode Toggle -->
+  <div class="theme-toggle-wrapper fixed-toggle">
+    <input type="checkbox" id="theme-toggle-checkbox" />
+    <label for="theme-toggle-checkbox" class="theme-toggle">
+      <span class="icon">🌞</span>
+      <span class="icon">🌙</span>
+      <span class="toggle-ball"></span>
+    </label>
+  </div>
+
+<!--Chatbot-->
+ <button id="chatbot-button">Chat</button>
+<div id="help-popup">
+  <span id="help-popup-close">&times;</span>
+  <p>Podemos ajudar?</p>
+</div>
+<div id="chatbot-popup">
+  <div id="chatbot-header">Fale Connosco</div>
+  <div id="chatbot-messages"></div>
+  <div id="chatbot-input-area">
+    <input type="text" id="chatbot-input" placeholder="Type a message..." />
+    <button id="chatbot-send">Enviar</button>
+  </div>
+</div>
+
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h2>Fale Connosco</h2>
+      <p>Tem dúvidas ou quer saber mais? Entre em contacto connosco:</p>
+      <ul>
+        <li><strong>📞 Telefone:</strong> 912 345 678</li>
+        <li><strong>📧 Email:</strong> info@petshop.pt</li>
+        <li><strong>📍 Morada:</strong> Rua dos Patudos 123, 1000-000 Lisboa</li>
+        <li><strong>🕒 Horário:</strong> Segunda a Sexta, 9h - 18h</li>
+      </ul>
+    </section>
+
+    <section class="carrossel">
+  <div class="swiper servicos-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/curiosidades/cur9.jpg" alt="Curiosidade 9">
+        <p>Um gato tem cerca de 130,000 pelos por cm2.</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="images/curiosidades/cur10.png" alt="Curiosidade 10">
+        <p>As glândulas sudoríparas de um cão estão localizadas nas suas patas.</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="images/curiosidades/cur11.jpg" alt="Curiosidade 11">
+        <p>O cão mais preguiçoso do mundo é o Bulldog Inglês.</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="images/curiosidades/cur12.jpg" alt="Curiosidade 12">
+        <p>Se forem treinados, alguns ratos de estimação podem até aprender truques.</p>
+      </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>📞 Mais informações: 912 345 678</p>
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <img src="images/facebook.png" class="footer-logo footer-logo-light" alt="Facebook">
+        <img src="images/facebook-dark.png" class="footer-logo footer-logo-dark" alt="Facebook Dark">
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <img src="images/instagram.png" class="footer-logo footer-logo-light" alt="Instagram">
+        <img src="images/instagram-dark.png" class="footer-logo footer-logo-dark" alt="Instagram Dark">
+      </a>
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+        <img src="images/youtube.png" class="footer-logo footer-logo-light" alt="YouTube">
+        <img src="images/youtube-dark.png" class="footer-logo footer-logo-dark" alt="YouTube Dark">
+      </a>
+    </div>
+    <p>&copy; 2025 Petshop. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Swiper Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

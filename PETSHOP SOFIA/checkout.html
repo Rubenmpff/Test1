@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout - Petshop Sofia</title>
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/darkmode.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <div class="theme-toggle-wrapper fixed-toggle">
+    <input type="checkbox" id="theme-toggle-checkbox" />
+    <label for="theme-toggle-checkbox" class="theme-toggle">
+      <span class="icon">🌞</span>
+      <span class="icon">🌙</span>
+      <span class="toggle-ball"></span>
+    </label>
+  </div>
+
+  <div class="cart-summary-wrapper">
+    <div class="cart-summary">
+      <h2>Itens no Carrinho</h2>
+      <ul id="cart-items"></ul>
+      <div class="cart-info">
+        <span id="checkout-total">Total: 0€</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="loja-container">
+    <h1 class="loja-title">Finalizar Compra</h1>
+    <form class="checkout-form">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="morada">Morada:</label>
+      <input type="text" id="morada" name="morada" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" name="telefone" required>
+
+      <label for="pagamento">Forma de Pagamento:</label>
+      <select id="pagamento" name="pagamento" required>
+        <option value="">Selecione</option>
+        <option value="cartao">Cartão de Crédito/Débito</option>
+        <option value="paypal">Paypal</option>
+        <option value="mbway">MB Way</option>
+      </select>
+
+      <div class="checkout-buttons">
+        <button type="submit" id="btn-finalizar">Finalizar Compra</button>
+        <button type="button" class="loja-btn" id="voltar-loja">Voltar à Loja</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal de sucesso -->
+  <div id="checkout-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="close-modal">&times;</span>
+    <h2>Compra Finalizada!</h2>
+    <p>Obrigado pela sua compra.</p>
+    <button id="modal-return-home">Voltar para a Página Inicial</button>
+  </div>
+</div>
+
+  <!-- Chatbot -->
+  <button id="chatbot-button">Chat</button>
+  <div id="help-popup">
+    <span id="help-popup-close">&times;</span>
+    <p>Podemos ajudar?</p>
+  </div>
+  <div id="chatbot-popup">
+    <div id="chatbot-header">Fale Connosco</div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input-area">
+      <input type="text" id="chatbot-input" placeholder="Type a message..." />
+      <button id="chatbot-send">Enviar</button>
+    </div>
+  </div>
+
+  <script src="js/carrinho.js"></script>
+  <script src="js/script.js"></script>
+
+  <footer>
+    <p>📞 Mais informações: 912 345 678</p>
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <img src="images/facebook.png" class="footer-logo footer-logo-light" alt="Facebook">
+        <img src="images/facebook-dark.png" class="footer-logo footer-logo-dark" alt="Facebook Dark">
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <img src="images/instagram.png" class="footer-logo footer-logo-light" alt="Instagram">
+        <img src="images/instagram-dark.png" class="footer-logo footer-logo-dark" alt="Instagram Dark">
+      </a>
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+        <img src="images/youtube.png" class="footer-logo footer-logo-light" alt="YouTube">
+        <img src="images/youtube-dark.png" class="footer-logo footer-logo-dark" alt="YouTube Dark">
+      </a>
+    </div>
+    <p>&copy; 2025 Petshop. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

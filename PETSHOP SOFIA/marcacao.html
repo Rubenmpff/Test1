@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcar Serviço - Petshop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/section.css">
+  <link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="images/PET PHOTO.jpg" alt="Petshop Logo" class="round-photo" />
+        <h1>
+          <a href="inicio.html" class="logo-link">Petshop</a>
+        </h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="marcacao.html">Marcações</a></li>
+        <li><a href="loja.html">Loja</a></li>
+        <li><a href="contactos.html">Contactos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Dark Mode Toggle -->
+  <div class="theme-toggle-wrapper fixed-toggle">
+    <input type="checkbox" id="theme-toggle-checkbox" />
+    <label for="theme-toggle-checkbox" class="theme-toggle">
+      <span class="icon">🌞</span>
+      <span class="icon">🌙</span>
+      <span class="toggle-ball"></span>
+    </label>
+  </div>
+
+  <!--Chatbot-->
+ <button id="chatbot-button">Chat</button>
+<div id="help-popup">
+  <span id="help-popup-close">&times;</span>
+  <p>Podemos ajudar?</p>
+</div>
+<div id="chatbot-popup">
+  <div id="chatbot-header">Fale Connosco</div>
+  <div id="chatbot-messages"></div>
+  <div id="chatbot-input-area">
+    <input type="text" id="chatbot-input" placeholder="Type a message..." />
+    <button id="chatbot-send">Enviar</button>
+  </div>
+</div>
+
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h2>Marcar Serviço</h2>
+      <form id="form-marcacao">
+        <label for="nome">Nome do Dono:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="animal">Tipo de Animal:</label>
+        <select id="animal" name="animal" onchange="toggleSpeciesTextbox()">
+          <option value="Cão">Cão</option>
+          <option value="Gato">Gato</option>
+          <option value="Outros">Outros</option>
+        </select>
+
+        <div id="species-container" style="display: none;">
+          <label for="species">Especifique a espécie:</label>
+          <input type="text" id="species" name="species" placeholder="coelho, tartaruga,...">
+        </div>
+
+        <label for="servico">Serviço:</label>
+        <select id="servico" name="servico">
+          <option value="Banho e Tosquia">Banho & Tosquia</option>
+          <option value="Treino Animal">Treino Animal</option>
+          <option value="Consulta Veterinária">Consulta Veterinária</option>
+          <option value="Hotel">Hotel</option>
+        </select>
+
+      <div id="hotel-dates" style="display: none;">
+  <label for="data-entrada">Data de Entrada:</label>
+  <input type="date" id="data-entrada" name="data_entrada">
+
+  <label for="data-saida">Data de Saída:</label>
+  <input type="date" id="data-saida" name="data_saida">
+</div>
+
+<div id="normal-date">
+  <label for="data">Data:</label>
+  <input type="date" id="data" name="data" required>
+</div>
+
+        <label for="hora">Hora:</label>
+<input type="time" id="hora" name="hora" required min="08:00" max="20:00">
+<p id="hora-erro" class="erro-msg">Por favor, selecione um horário entre as 08:00h e as 20:00h.</p>
+
+<label for="contacto">Contacto:</label>
+<input type="text" id="contacto" name="contacto" required>
+<span id="contacto-erro" class="erro-msg"></span>
+<br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="observacoes">Observações:</label>
+        <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea>
+
+        <button type="submit">Marcar</button>
+      </form>
+
+      <p id="mensagem"></p>
+      <div id="popup-modal">
+  <div class="popup-content">
+    <span id="popup-close">&times;</span>
+    <div id="popup-message"></div>
+  </div>
+</div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>📞 Mais informações: 912 345 678</p>
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <img src="images/facebook.png" class="footer-logo footer-logo-light" alt="Facebook">
+        <img src="images/facebook-dark.png" class="footer-logo footer-logo-dark" alt="Facebook Dark">
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <img src="images/instagram.png" class="footer-logo footer-logo-light" alt="Instagram">
+        <img src="images/instagram-dark.png" class="footer-logo footer-logo-dark" alt="Instagram Dark">
+      </a>
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+        <img src="images/youtube.png" class="footer-logo footer-logo-light" alt="YouTube">
+        <img src="images/youtube-dark.png" class="footer-logo footer-logo-dark" alt="YouTube Dark">
+      </a>
+    </div>
+    <p>&copy; 2025 Petshop. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
